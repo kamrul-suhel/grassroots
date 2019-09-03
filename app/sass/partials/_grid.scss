@@ -1,0 +1,64 @@
+$grid-gutter: 20px;
+$grid-columns: 12;
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+	align-items: stretch;
+    margin: -#{$grid-gutter};
+
+    & > [class^='grid-'],
+    & > [class*=' grid-'] {
+	    display: flex;
+	    flex-flow: row wrap;
+	    padding: #{$grid-gutter};
+    	position: relative;
+        z-index:1;
+	}
+
+	.grid-inner {
+		width: 100%;
+	}
+}
+
+@for $i from 1 through $grid-columns {
+    .grid-xs-#{$i} {
+        width: ($i * (100 / $grid-columns)) * 1%;
+    }
+}
+
+@include at-least($tablet) {
+    @for $i from 1 through $grid-columns {
+        .grid-s-#{$i} {
+            width: ($i * (100 / $grid-columns)) * 1%;
+        }
+    }
+}
+
+@include at-least($large-tablet) {
+    @for $i from 1 through $grid-columns {
+        .grid-m-#{$i} {
+            width: ($i * (100 / $grid-columns)) * 1%;
+        }
+    }
+}
+
+@include at-least($small-desktop) {
+    @for $i from 1 through $grid-columns {
+        .grid-md-#{$i} {
+            width: ($i * (100 / $grid-columns)) * 1%;
+        }
+    }
+}
+
+@include at-least($desktop) {
+    @for $i from 1 through $grid-columns {
+        .grid-#{$i} {
+            width: ($i * (100 / $grid-columns)) * 1%;
+        }
+    }
+}
+
+.flex-direction-column{
+  flex-direction:column;
+}

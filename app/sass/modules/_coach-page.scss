@@ -1,0 +1,36 @@
+.coach-page {
+  .form-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tooltip-icon {
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+  }
+
+  .form-type-checkbox {
+    width: 100%;
+  }
+}
+
+.coach {
+  .page-actions {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+    margin-top: -5px;
+  }
+}
+
+/**
+  Coach schedule list component
+ */
+.coach-schedule {
+  .form-group {
+    &.coach {
+      width: 480px;
+    }
+  }
+}

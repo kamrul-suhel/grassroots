@@ -1,0 +1,163 @@
+/**
+Session edit component style
+ */
+
+.edit-session{
+  .form-type-timepicker{
+    .rc-time-picker{
+      .rc-time-picker-input{
+        width:100%;
+      }
+    }
+  }
+
+  .form-type-radio{
+    span{
+      white-space:unset;
+    }
+  }
+}
+
+
+/**
+Coach assessment component style
+ */
+
+.coach-assessment{
+  .form-section{
+    width:100%;
+  }
+
+  .assessment-form{
+
+    .form-label{
+      font-size:18px;
+      font-weight:bold;
+    }
+
+    .form-option-radio{
+      .option-label{
+        margin-left:10px;
+      }
+    }
+  }
+
+  .meta{
+    &.aligned{
+      margin-bottom:25px;
+    }
+  }
+
+  table{
+    th:nth-child(4) {
+      text-align:center;
+    }
+  }
+
+  .meta-section{
+    .meta{
+      &.aligned{
+        .label{
+          min-width: 80px;
+        }
+      }
+
+      .label{
+        font-size:18px;
+      }
+    }
+  }
+
+}
+
+
+/**
+Assessment component style
+ */
+
+.assessment{
+  .form-group{
+    .form-label{
+      font-size:18px;
+      font-weight:bold;
+    }
+  }
+
+  .form-field-wrapper{
+    .form-option-radio{
+      .option-label{
+        margin-left:10px;
+      }
+    }
+  }
+
+  .form-section{
+    .form-type-input{
+      margin-bottom:25px;
+    }
+  }
+}
+
+
+/**
+  Add new programme & fixture time style
+ */
+.programme-time{
+  display:flex;
+  justify-content:space-between;
+  width:calc(50% - 15px);
+
+  @include until($tablet){
+    width:calc(100%);
+  }
+
+  .form-group{
+    @include until($tablet){
+      width:47%;
+    }
+
+    .rc-time-picker-input{
+      width:100%;
+    }
+  }
+}
+
+.fixture-time{
+  display:flex;
+
+  .form-group{
+    margin-right:15px;
+  }
+}
+
+.programme-term{
+  display:flex;
+  flex-direction:column;
+
+  .form-option-checkbox{
+    margin-bottom:0 !important;
+  }
+
+  .form-option-inner{
+    .option-label{
+      display:inline-block;
+      margin-left:5px;
+    }
+  }
+
+  .form-field-error-wrapper{
+    display:flex;
+
+    ul{
+      margin:0;
+    }
+  }
+}
+
+.programme-status{
+  width:100% !important;
+
+  .form-field-wrapper{
+    display:flex;
+  }
+}

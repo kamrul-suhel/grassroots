@@ -1,0 +1,70 @@
+.article {
+	width: 100%;
+	flex:1;
+	display: flex;
+	margin-bottom: 40px;
+	white-space:pre-wrap;
+
+	@include until($large-tablet){
+		min-height:400px;
+	}
+
+	@include until($tablet){
+		min-height:400px;
+	}
+
+
+
+	h2 {
+		margin: 20px 0 15px;
+	}
+
+	.content-wrapper {
+		flex: 1;
+		order: 2;
+
+		@include until($small-tablet) {
+			padding: 20px;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			color: $brand-color-alt;
+			color: white;
+			text-transform: uppercase;
+			font-family: $headings-font-family;
+			//font-weight: 700;
+		}
+	}
+
+	.bg-wrapper {
+		width: 36%;
+		position: relative;
+		order: 3;
+		margin-right: 10%;
+
+		&.on-left {
+			order: 1;
+		}
+	}
+
+	.bg {
+		@extend %bg-cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		backface-visibility: hidden;
+	}
+
+	.img {
+		@extend %bg-contain;
+		background-position: top right;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		backface-visibility: hidden;
+	}
+}

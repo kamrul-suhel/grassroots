@@ -1,0 +1,51 @@
+$font-family-base: 		"Lato", Helvetica, Arial, sans-serif;
+$font-family-alt: 		"Akzid Gro";
+$icon-family-base: 		"Ionicons";
+
+$font-size-base: 		16px;
+
+$line-height-base: 		1.65;
+$spacing-between-two-button: 25px;
+
+$text-color: 			#999999;
+$text-color-alt: 		#bac7cf;
+$link-color: 			#337ab7;
+$light-blue:            #3e91f7;
+$bg-color:				#1c1e1b;
+$bg-color-alt:			#222220;
+$border-color:			#ececec;
+
+$danger:				#d9534f;
+$warning:				#f0ad4e;
+$primary:				#337ab7;
+$success:				#5cb85c;
+
+$brand-color:			#BB9D70;
+$brand-color-alt:		#FF6D00;
+
+$light-white:           #FBFBFB;
+
+$light-grey:            rgb(221, 221, 221);
+$nav-select:            rgb(112, 112, 112);
+
+$headings-font-family:  "Intro Inline", Helvetica, Arial, sans-serif;
+$subheadings-font-family:  "Intro Inline", Helvetica, Arial, sans-serif;
+$headings-font-weight:  400;
+$headings-line-height:  1.25;
+$headings-color: 		$brand-color;
+
+$brand-color-light: 	lighten($text-color, 50%);
+
+$site_width:			1600px;
+
+$mobile: 				320px;
+$large-mobile:			520px;
+$small-tablet:			600px;
+$tablet: 				768px;
+$large-tablet:			980px;
+$small-desktop:			1024px;
+$desktop: 				1280px;
+$large-desktop:			1440px;
+$xxl-desktop:			1872px;
+
+$viewport-increment: 	1px;

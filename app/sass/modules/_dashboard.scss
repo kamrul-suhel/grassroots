@@ -1,0 +1,83 @@
+.dashboard-box {
+	flex-flow: column !important;
+
+	.grid-inner {
+		flex: 1;
+	}
+
+	.article {
+		margin: 0;
+		min-height: 0;
+	}
+
+	.table {
+		margin-bottom: 0;
+	}
+
+	.dashboard-box-title {
+		width: 100%;
+		color: white;
+		font-size: 24px;
+	}
+
+	.player-skills {
+		margin-top: 5px;
+	}
+}
+
+.show-tut {
+	margin-bottom: 20px;
+}
+
+.get-started-banner {
+	background-color: rgba($brand-color, 0.8);
+	padding: 40px;
+	margin-bottom: 40px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+	@include until($tablet) {
+		padding: 20px;
+	}
+
+	h2 {
+		width: 100%;
+		color: white;
+		border-bottom: 2px solid $bg-color;
+		margin-bottom: 30px;
+		padding-bottom: 15px;
+		font-size: 32px;
+	}
+
+	.count {
+		margin-right: 10px;
+	}
+
+	.title {
+		font-family: $headings-font-family;
+		font-size: 24px;
+	}
+
+	.banner-item {
+		width: calc(33.33% - 40px);
+		margin-bottom: 30px;
+
+		@include until($small-desktop) {
+			width: 48%;
+		}
+
+		@include until($tablet) {
+			width: 100%;
+		}
+	}
+
+	.button-outer {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.form-actions {
+	    margin-top: 20px;
+	}
+}

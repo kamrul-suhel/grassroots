@@ -1,0 +1,99 @@
+.site-content-inner.player-page {
+  .form {
+    .form-section {
+      width: 100%;
+    }
+  }
+}
+
+.player-assign-to-team {
+  width: 100%;
+
+  .awaiting-trialists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #000;
+    margin-top:40px;
+  }
+
+  .trial-content {
+    background: #fff;
+    display:flex;
+    flex-direction:column;
+    width:48%;
+    min-width:230px;
+    padding:15px;
+
+    &.trial-list-list{
+      ul {
+        li{
+        }
+      }
+    }
+
+    .tooltip .tooltip-message{
+      left:9px;
+      background:#000;
+      color:#fff;
+
+      &:before{
+        border-color: transparent transparent #000 transparent;
+      }
+    }
+
+    h4{
+      color:#000;
+      font-size:18px;
+      font-weight:normal;
+      margin:0 0 15px 0;
+    }
+
+    ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+
+      li{
+        padding:5px 0;
+        transition:all ease-in-out .3s;
+        border-bottom: 1px solid #ccc;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:last-child{
+          border-bottom:none;
+        }
+
+        &:first-child{
+          border-bottom: 1px solid #ccc;
+        }
+
+        button{
+          border:none;
+          padding:0;
+          background:transparent;
+          display:inline-block;
+          margin:0 5px;
+
+          i{
+            &:before{
+              transition:all ease-in-out .3s;
+            }
+
+            &:hover{
+              &:before{
+                color:$brand-color-alt;
+              }
+            }
+          }
+
+          span{
+            margin-top:3px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.message-success{
+  position: fixed;
+  top: 0;
+  color: #3e91f7;
+  padding: 10px;
+  background-color: $bg-color;
+  text-align: right;
+  margin-top: 15px;
+  right: 0;
+  z-index: 1000;
+  transition: all ease-in-out .3s;
+  transform: translateX(264px);
+}
+
+.message-success.dark{
+  border-color:#BB9D70;
+  background: $bg-color;
+}
+
+.message-success.open{
+  transform: translateX(-10px);
+}

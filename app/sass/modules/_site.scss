@@ -1,0 +1,492 @@
+.site-inner {
+
+  @extend %clearfix;
+  position: relative;
+  min-height: 100%;
+  padding-top: 170px;
+  display: flex;
+  flex-flow: row wrap;
+
+  @include until($small-tablet) {
+    padding-top: 140px;
+  }
+
+  .customers-page {
+    .content-filter {
+      .form-label {
+        display: none;
+      }
+    }
+
+    .table-inner {
+      th:nth-child(2) {
+        width: 170px;
+        text-align: left;
+      }
+
+      th:nth-child(3) {
+        width: 150px;
+        text-align: left;
+      }
+
+      a {
+        margin-right: 5px;
+
+        i:hover {
+          color: $brand-color-alt;
+        }
+
+        .tooltip-message {
+          min-width: 50px;
+          top: 30px;
+          display: none;
+        }
+      }
+    }
+
+    .table-footer {
+      display: none;
+    }
+
+    .customer-table-footer {
+      position: relative;
+
+      .customer-counter-title {
+        position: absolute;
+        left: 65px;
+      }
+
+      div {
+        color: white;
+        font-weight: bold;
+      }
+
+      td {
+        background: #000;
+        color: #fff;
+
+        p {
+          margin: 0;
+
+          span {
+            color: white;
+            font-weight: bold;
+          }
+
+        }
+      }
+
+      td:nth-child(4) {
+        //text-align: left;
+      }
+    }
+  }
+
+  .not-logged-in & {
+    padding-top: 170px;
+    height: calc(100vh - 55px);
+    min-height: auto;
+    overflow: hidden;
+
+    .site-content {
+      @include until(1406px) {
+        height: calc(100vh - 380px);
+      }
+    }
+  }
+
+  .site-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    padding: 60px 60px 15px 60px;
+    margin-left: 220px;
+    height: calc(100vh - 170px);
+    overflow-y: scroll;
+
+    @include until($large-desktop) {
+      padding: 50px 25px 15px 50px;
+    }
+
+    .forgot-password-component {
+      width: 520px;
+      margin: 0 auto;
+      text-align: left;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .forgot-password-sent {
+        width: 440px;
+        margin: 0 auto;
+
+        section {
+          margin: 40px 0;
+        }
+      }
+
+
+      p {
+        margin: 0;
+      }
+
+      .form-wrapper {
+        padding-bottom: 16px;
+      }
+
+      @include until($large-mobile) {
+        position: relative;
+        top: 0;
+      }
+
+      @include until($tablet) {
+        top: 0;
+        position: relative;
+      }
+
+      .form-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .form-outer {
+          width: 300px;
+          flex: none;
+        }
+
+        .form-actions {
+          justify-content: space-between;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  .site-content-inner {
+    width: 100%;
+
+    &.coach-assessment {
+      width: 75%;
+    }
+
+    &.one-page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+
+    &.edit-admin-page {
+
+      .form-actions {
+        width: 75%
+      }
+
+      .edit-admin-buttons {
+        display: flex;
+        width: 75%;
+        margin-top: 150px;
+        justify-content: flex-end;
+
+        .back-button {
+          position: relative;
+          right: 30px;
+        }
+
+        .form-actions {
+          margin-top: 0;
+          width: 5.5%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: baseline;
+        }
+      }
+
+    }
+
+
+    .price {
+      color: $brand-color-alt
+    }
+  }
+
+  .event-border {
+    border: none;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 170px;
+    // margin-top: 30px;
+    bottom: 0;
+    // left: 0;
+    height: calc(100vh - 170px);
+    width: 220px;
+    white-space: nowrap;
+    z-index: 10;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: $bg-color;
+    padding: 57px 0 20px;
+    transition: left 500ms ease, width 500ms ease, margin-left 500ms ease;
+
+    @include until($large-desktop) {
+      padding-top: 51px;
+    }
+
+    @include until($small-tablet) {
+      padding-top: 10px;
+      top: 140px;
+      height: calc(100vh - 140px);
+    }
+
+    @include until($large-tablet) {
+    }
+
+    @include until($desktop) {
+
+    }
+
+    .navbar-header {
+      padding: 15px 0 25px;
+    }
+
+    .sidebar-toggle {
+      margin-left: auto;
+      margin-bottom: 8px;
+      align-items: center;
+      border-radius: 0px 4px 4px 0;
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      left: 300px;
+      width: 40px;
+      z-index: 1000;
+      margin-right: 0px;
+
+      @include until($large-desktop) {
+        left: 240px;
+      }
+
+      &:hover {
+
+      }
+
+      i {
+        font-size: 40px;
+        color: $brand-color-alt;
+      }
+    }
+
+    &.is-closed {
+      margin-left: -165px;
+
+
+      .sidebar-toggle {
+        left: 0;
+      }
+
+      & + .site-content {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 70px;
+        padding-top: 40px;
+      }
+
+      .menu-item a span {
+        display: none;
+      }
+
+      a {
+        padding: 4px 0;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .sidebar + .site-content {
+    width: calc(100% - 300px);
+    transition: margin 500ms ease, width 500ms ease;
+
+    @include until($large-desktop) {
+      width: calc(100% - 240px);
+      // margin-left: 240px;
+    }
+
+    @include until($large-tablet) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  .page-component {
+    .content-filter {
+      display: none;
+    }
+  }
+
+}
+
+.not-logged-in {
+  .site-inner {
+    .site-content {
+      padding: 85px 80px 15px 90px;
+    }
+  }
+
+  .login {
+    .page-header {
+      background: transparent;
+    }
+  }
+
+  .page-header {
+    margin: 0;
+    padding: 15px 15px 30px;
+  }
+
+  article {
+    padding: 15px;
+  }
+}
+
+.page-header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-bottom: 55px;
+  position: relative;
+
+  @include until($large-tablet) {
+    margin-bottom: 0;
+  }
+
+  .sub-heading {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .faq-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height:28px;
+
+    a {
+      color: #fff;
+      line-height:28px;
+    }
+  }
+}
+
+
+.page-title {
+  font-size: 28pt;
+  color: white;
+  margin-right: 40px;
+  display:flex;
+
+  @include until($large-tablet) {
+    font-size: 40px;
+    margin-right: 0;
+  }
+
+  @include until($large-tablet) {
+    font-size: 30px;
+  }
+
+  .page-title-img{
+    display:inline-block;
+    width:120px;
+    height:80px;
+    margin-right:10px;
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+}
+
+.page-sub-title {
+  color: white;
+  margin-right: 40px;
+}
+
+.page-description {
+  color: white;
+  max-width: 100%;
+  margin-top: -15px;
+  margin-bottom: 25px;
+  font-family: $font-family-alt;
+  font-size: 16px;
+
+  &.short {
+    @include at-least($tablet) {
+      width: 100%;
+    }
+
+    @include at-least($small-desktop) {
+      width: 75%;
+    }
+  }
+
+  .includes-vat {
+    color: #cccccc;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
+.page-actions {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 60px;
+  margin-top: -5px;
+
+  @include until($large-tablet) {
+    flex-direction: column;
+    width: min-content;
+  }
+
+  .button-standard-wrapper {
+    margin: 5px 20px 5px 0;
+
+    &.medium {
+      .button-standard {
+        width: 130px;
+      }
+    }
+
+    &.large {
+      .button-standard {
+        width: 150px;
+      }
+    }
+
+    &.extra-large {
+      .button-standard {
+        width: 180px;
+      }
+    }
+
+    @include until($large-tablet) {
+      margin: 5px 10px 5px 0;
+      width: 100%;
+
+      .button-standard {
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+

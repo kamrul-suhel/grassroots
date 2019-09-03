@@ -1,0 +1,134 @@
+h1,h2,h3,h4,h5,h6 {
+	color: white;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
+	padding: 0;
+
+	a {
+		color: inherit;
+	}
+}
+
+h1,.h1 {
+	font-size: 36px;
+	margin: 0;
+}
+
+h2,.h2 {
+	font-size: 30px;
+	margin: 0 0 15px 0;
+}
+
+h3,.h3 {
+	font-size: 26px;
+	line-height: 1.875;
+	margin: 0 0 15px 0;
+}
+
+h4,.h4 {
+	font-size: 22px;
+	margin: 0 0 5px 0;
+}
+
+h5,.h5 {
+	font-size: 1em;
+	margin: 0 0 5px 0;
+}
+
+h6,.h6 {
+	font-size: 1em;
+	margin: 0 0 5px 0;
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+.text-center{
+	text-align:center;
+}
+
+.text-bold{
+	font-weight:bold;
+	.price {
+		color: $brand-color-alt
+	}
+}
+
+.tooltip-icon{
+	.text-danger{
+		color:$danger !important;
+	}
+}
+
+.text-gold{
+	.ion-pricetag{
+		color: $brand-color !important;
+	}
+}
+
+.text-danger {
+	color: $danger !important;
+
+	.tooltip-icon{
+		span{
+			color: $danger !important;
+		}
+	}
+}
+.text-primary{
+	color:$brand-color-alt !important;
+}
+
+.text-green {
+	color:$success !important;
+
+	.tooltip-icon {
+		span {
+			color: $success !important;
+		}
+	}
+}
+
+// Set margin
+@for $i from 0 through 60 {
+	$number : 0;
+	@if($i > 0){
+		$number : $i + 2;
+	}
+	.mb-#{$number} {
+		margin-bottom: $number + px !important;
+	}
+}
+
+@for $i from 0 through 60 {
+	$number : 0;
+	@if($i > 0){
+		$number : $i + 2;
+	}
+
+	.mt-#{$number} {
+		margin-top: $number + px !important;
+	}
+}
+
+@for $i from 0 through 12 {
+	$number : 0;
+	@if($i > 0){
+		$number : $i + 2;
+	}
+	.mr-#{$number} {
+		margin-right: $number + px !important;
+	}
+}
+
+@for $i from 0 through 12 {
+	$number : 0;
+	@if($i > 0){
+		$number : $i + 2;
+	}
+	.ml-#{$number} {
+		margin-left: $number + px !important;
+	}
+}

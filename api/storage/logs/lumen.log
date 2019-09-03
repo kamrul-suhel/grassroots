@@ -1,0 +1,111 @@
+[2019-03-15 16:16:09] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-03-15 16:16:34] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-03-15 16:17:11] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-03-15 16:18:06] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-03-15 16:18:16] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-03-15 16:18:35] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-03-15 16:20:38] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function resource_path() in /Users/xanda-dev-2/sites/grassroots-app/api/config/mail.php:119
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(581): require()
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(87): Laravel\Lumen\Application->configure('mail')
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#3 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#4 {main}  
+[2019-05-02 10:51:40] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-05-02 10:52:09] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-05-02 10:52:52] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-05-02 10:54:32] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-05-02 10:56:57] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-05-02 10:59:28] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  
+[2019-05-20 12:26:44] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\LumenServiceProvider' not found in /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php:163
+Stack trace:
+#0 /Users/xanda-dev-2/sites/grassroots-app/api/app/Providers/AppServiceProvider.php(16): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /Users/xanda-dev-2/sites/grassroots-app/api/vendor/laravel/lumen-framework/src/Application.php(172): App\Providers\AppServiceProvider->register()
+#2 /Users/xanda-dev-2/sites/grassroots-app/api/bootstrap/app.php(82): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /Users/xanda-dev-2/sites/grassroots-app/api/public/index.php(14): require('/Users/xanda-de...')
+#4 /Users/xanda-dev-2/.composer/vendor/laravel/valet/server.php(147): require('/Users/xanda-de...')
+#5 {main}  

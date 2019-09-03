@@ -1,0 +1,606 @@
+.not-logged-in {
+  .site-header {
+    background: #1c1e1b;
+
+    &.club-logo-header {
+      background: $bg-color;
+    }
+  }
+}
+
+.club-logo-header {
+  .has-submenu {
+    margin-right: 0;
+  }
+}
+
+//Guardian
+@include until($small-tablet) {
+  .site-header {
+    &.guardian {
+      .main-bar {
+        display: flex;
+        background: $bg-color;
+        justify-content: center;
+        align-items: center;
+      }
+      .site-provider {
+        display: block;
+        height: auto;
+      }
+      .header-navigation {
+        padding-top: 0;
+        ul {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+//Super Admin navigation
+@include until($small-tablet) {
+  .site-header {
+    &.superadmin {
+      .main-bar {
+        display: flex;
+        background: $bg-color;
+        justify-content: center;
+        align-items: center;
+      }
+      .site-provider {
+        display: block;
+        height: 170px;
+      }
+      .header-navigation {
+        .master-admin {
+          padding-top: 0;
+          ul {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Admin Navigation
+@include until($small-tablet) {
+  .site-header {
+    &.admin {
+      .main-bar {
+        display: flex;
+        background: $bg-color;
+        justify-content: center;
+        align-items: center;
+      }
+      .site-provider {
+        display: block;
+      }
+      .header-navigation {
+        padding-top: 0;
+        ul {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+//Group Admin Navigation
+@include until($small-tablet) {
+  .site-header {
+    &.groupadmin {
+      .main-bar {
+        display: flex;
+        background: $bg-color;
+        justify-content: center;
+        align-items: center;
+      }
+      .site-provider {
+        display: block;
+        height: auto;
+      }
+      .header-navigation {
+        padding-top: 0;
+        ul {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+//Coach Navigation
+@include until($tablet) {
+  .site-header {
+    &.coach {
+      .main-bar {
+        display: flex;
+        background: $bg-color;
+        justify-content: center;
+        align-items: center;
+      }
+      .site-provider {
+        display: block;
+        height: auto;
+      }
+      .header-navigation {
+        padding-top: 0;
+        ul {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+//Login
+@include until($small-tablet) {
+  .site-header {
+    &.false {
+      .main-bar {
+        display: flex;
+        background: $bg-color;
+        justify-content: center;
+        align-items: center;
+        height: 170px;
+      }
+      .site-provider {
+        display: block;
+        height: auto;
+      }
+      .provider-logo {
+        height: 170px !important;
+      }
+      .header-navigation {
+        padding-top: 0;
+        ul {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+.site-header {
+  height: 170px;
+  color: $text-color-alt;
+  background-color: $bg-color;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: $font-family-alt;
+
+  @include until($small-tablet) {
+    height: 140px;
+    .site-branding {
+      margin-right: 10px;
+    }
+  }
+
+  .site-provider {
+    .provider-logo {
+      display: block;
+      height: 170px;
+      position: absolute;
+      width: auto;
+      top: 0;
+    }
+    @include until($small-tablet) {
+      .provider-logo {
+        height: 140px;
+        width: auto;
+      }
+    }
+  }
+
+  &.menu-is-open {
+    @include until($large-tablet) {
+      height: 100%;
+    }
+  }
+
+  a {
+    color: $text-color-alt;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  i {
+    font-size: 18pt;
+    width: auto;
+  }
+
+  .main-bar {
+    display: flex;
+    height: 170px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include until($large-tablet) {
+      align-items: center;
+      height: 170px;
+    }
+
+    @include until($small-tablet) {
+      padding: 0 5px 0 5px;
+      height: 140px;
+      // padding: 0 5px 10px 5px;
+    }
+
+    .navbar-header {
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      li {
+        .ion-social-facebook {
+          &:hover {
+            -webkit-text-fill-color: #3b5998;
+          }
+        }
+
+        .ion-social-twitter {
+          &:hover {
+            -webkit-text-fill-color: #1da1f2;
+          }
+        }
+
+        .ion-social-instagram {
+          &:hover {
+            -webkit-text-fill-color: #ffdc80;
+          }
+        }
+
+        .ion-social-youtube {
+          &:hover {
+            -webkit-text-fill-color: #c4302b;
+            &::after {
+              background: #fff;
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #000;
+            top: 4px;
+            left: 6px;
+            z-index: -1;
+          }
+        }
+
+        &.has-submenu {
+          display: block;
+          float: right;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  .profile-banner {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .pic {
+      @extend %bg-cover;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    span {
+      display: inline-block;
+      //vertical-align: middle;
+    }
+  }
+
+  .site-provider {
+    display: flex;
+    flex: 1 1 33.33%;
+    align-items: center;
+
+    @include until($small-tablet) {
+      display: none;
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .site-branding-title {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include until($small-tablet) {
+      margin: 5px 5px 0;
+      flex: 1;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+
+      span {
+        color: $bg-color;
+        font-size: 16px;
+
+        @include until($small-tablet) {
+          font-size: 16px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .site-branding-logo {
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    height: 170px;
+    width: 394px;
+    z-index: -1;
+
+    &.club-logo {
+      .has-submenu {
+        margin-right: 30px;
+      }
+    }
+
+    //&.club-login{
+    //  position:fixed;
+    //  top:0;
+    //  right:0;
+    //  z-index:1000;
+    //  height:150px;
+    //  background-color: white;
+    //  overflow: hidden;
+    //  padding-left: 120px;
+    //  padding-right: 30px;
+    //  margin-left: -100px;
+    //
+    //
+    //  .triangle-overlay {
+    //    padding-left: 0;
+    //    padding-bottom: 150px;
+    //    padding-right: 155px;
+    //    padding-top: 0;
+    //
+    //    &:before {
+    //      background-color: #1c1e1b;
+    //    }
+    //  }
+    //}
+
+    @include until($large-tablet) {
+      display: none;
+    }
+
+    .triangle-overlay {
+      padding-left: 0;
+      padding-bottom: 300px;
+      padding-right: 255px;
+      padding-top: 0;
+
+      &:before {
+        //box-shadow: 8px 5px 30px rgba(0,0,0,1);
+        background-color: #1c1e1b;
+      }
+    }
+  }
+
+  .branding-logo-wrap {
+    align-items: flex-end;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5px 30px 0 0;
+    position: relative;
+  }
+
+  .branding-logo {
+    display: block;
+    max-height: 140px;
+
+    @include until($small-tablet) {
+      max-height: 60px;
+    }
+  }
+
+  .header-navigation {
+    flex: 1 1 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding-right: 20px;
+    font-size: 16px;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        a {
+          padding: 2px 10px;
+        }
+      }
+
+      .submenu {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    @include until($tablet) {
+      .submenu {
+        flex-direction: row;
+      }
+    }
+
+    .master-admin {
+      padding-top: 128px;
+    }
+
+    @include until($large-tablet) {
+      padding-right: 20px;
+      text-align: right;
+      .organisation {
+        margin-left: auto;
+        width: 90%;
+      }
+    }
+
+    .organisation {
+      line-height: 30px;
+    }
+
+    @include until($tablet) {
+      .organisation {
+        text-align: right;
+        margin-left: auto;
+        width: 90%;
+      }
+    }
+
+    @include until($small-tablet) {
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      flex: 1;
+      .organisation {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .icon-back {
+      cursor: pointer;
+
+      &:hover {
+        color: $brand-color-alt;
+      }
+    }
+
+    & > ul > li {
+      margin-left: 6px;
+
+      @include until($small-tablet) {
+        margin-left: 2px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      & > a,
+      & > span {
+        padding: 15px 8px;
+        color: white;
+
+        @include until($small-tablet) {
+          padding: 5px;
+        }
+      }
+
+      & > a:hover {
+        color: $brand-color-alt;
+      }
+    }
+  }
+
+  .navicon {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 90px;
+    z-index: 101;
+
+    @include at-least($large-tablet) {
+      display: none;
+    }
+
+    @include until($tablet) {
+      height: 76px;
+    }
+
+    &.is-active .navicon-inner span {
+      &:nth-child(1) {
+        top: 10px;
+        width: 0%;
+        left: 50%;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(4) {
+        top: 10px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+
+    .navicon-inner {
+      width: 40px;
+      height: 26px;
+      position: relative;
+      margin: auto;
+      top: 50%;
+      margin-top: -13px;
+
+      span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: $brand-color;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+        will-change: transform, top, left;
+
+        &:nth-child(1) {
+          top: 0px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          top: 12px;
+        }
+
+        &:nth-child(4) {
+          top: 24px;
+        }
+      }
+    }
+  }
+}

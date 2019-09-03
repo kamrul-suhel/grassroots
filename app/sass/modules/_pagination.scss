@@ -1,0 +1,48 @@
+.content-pagination {
+	text-align: center;
+	// background-color: white;
+	margin-top: 30px;
+	padding: 15px 30px;
+
+	.content-pagination-nav-first,
+	.content-pagination-nav-last {
+		display: none;
+	}
+
+	ul {
+		display: inline-block;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			display: inline;
+			margin-left: 8px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			& > a {
+				@extend .button;
+				cursor: pointer;
+				font-size: 12px;
+				min-width: 35px;
+				color: #cccccc;
+				border-color: #cccccc;
+				margin-bottom: 10px;
+			}
+
+			&.disabled > a {
+				pointer-events: none;
+				opacity: 0.6;
+			}
+
+			&.active > a {
+				cursor: default;
+				color: $brand-color;
+				border-color: $brand-color;
+			}
+		}
+	}
+}

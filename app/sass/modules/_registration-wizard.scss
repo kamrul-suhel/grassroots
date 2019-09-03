@@ -1,0 +1,204 @@
+.registration-wizard {
+	.site-content-inner {
+		width: 65%;
+		padding: 60px;
+		overflow-y: scroll;
+		padding-top:200px;
+
+
+		@include until($small-tablet) {
+			width: 100%;
+			padding: 40px;
+			padding-top:200px;
+		}
+
+		.item-bg-wrapper{
+			h2{
+				font-size:22px;
+
+				@include until($large-desktop){
+					font-size:12px;
+				}
+
+				@include until($small-desktop){
+					font-size:12px;
+				}
+
+				@include until($desktop){
+					font-size:22px;
+				}
+
+				@include until($large-tablet){
+					font-size:22px;
+				}
+
+				@include until($tablet){
+					font-size:22px;
+				}
+
+				@include until($mobile){
+					font-size:22px;
+				}
+			}
+		}
+	}
+	.overview {
+		@extend %bg-cover;
+		width: 35%;
+		position: fixed;
+		top: 170px;
+		right: 0;
+		bottom: 0;
+		background-image: url('http://the18.com/sites/default/files/u403/practice-life-lessons-soccer-pitch-shoot-fear-rules-composure-league-life-control-perfect-lose.jpg');
+
+		@include until($small-tablet) {
+			display: none;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba($bg-color, 0.55);
+		}
+	}
+
+	.overview-title {
+		border-bottom: 2px solid $light-white;
+		color: white;
+		font-family: $font-family-base;
+		padding-bottom: 25px;
+		margin-bottom: 0;
+	}
+
+	.overview-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transform: translateX(100%);
+		transition: transform 0.8s ease;
+		display: flex;
+		flex-direction: column;
+		overflow-y:auto;
+
+		&.is-visible {
+			transform: translateX(0);
+		}
+	}
+
+	.section-form {
+		margin: 0 !important;
+	}
+
+	.overview-top {
+		flex: 1;
+		padding: 40px;
+		background-color: rgba($bg-color, 0.2);
+	}
+
+	.overview-bottom {
+		padding: 40px;
+		background-color: $bg-color;
+
+		.meta {
+			justify-content: space-between;
+			font-size: 26px;
+			// border-bottom: 4px solid $brand-color;
+			padding-bottom: 8px;
+			margin: 0;
+
+			.label {
+				min-width:200px;
+				color: white;
+				font-weight: 400;
+			}
+
+			.value {
+				color: $brand-color-alt;
+			}
+		}
+
+		.form-actions {
+			margin-top: 20px;
+		}
+	}
+
+	.alert {
+		width: calc(65% - 120px);
+		margin: 40px 60px -20px;
+	}
+
+	.loader {
+		width: 100%;
+		padding: 5px;
+	}
+
+	.table-wrapper {
+		width: 100%;
+
+		.table {
+			margin-bottom: 5px;
+
+			td:last-child {
+				width: 200px;
+			}
+		}
+	}
+
+	.small-text {
+		font-size: 14px;
+	}
+
+	.player-details {
+		position: relative;
+		margin-top: 80px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		.edit-button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: $brand-color;
+			border-color: $brand-color;
+			margin: 4px 10px 4px 0;
+			font-size: 12px;
+
+			&:hover {
+				color: rgba($brand-color, 0.8);
+				border-color: rgba($brand-color, 0.8);
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.center-text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.form-group {
+			width: calc(25% - 20px);
+
+			@include until($small-tablet) {
+				width: 100%;
+				margin: 10px 0;
+			}
+		}
+
+		.form-actions {
+			margin-top: 20px;
+		}
+	}
+}

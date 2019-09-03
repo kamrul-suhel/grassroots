@@ -1,0 +1,83 @@
+.meta-section {
+	margin-top: 40px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	.meta-section-title {
+		color: white;
+		margin-top: 0;
+		margin-bottom: 22px;
+		font-size: 30px;
+		font-family: $font-family-alt;
+		@include until($small-tablet) {
+			font-size: 26px;
+		}
+	}
+
+	.end-of-year & {
+		max-width: 500px;
+	}
+}
+
+// parent login my children section
+.item-player{
+	.meta {
+		.label {
+			color:$text-color;
+		}
+	}
+}
+
+
+.meta {
+	width: 100%;
+	margin-bottom: 0;
+	display: flex;
+	align-items: baseline;
+	font-size: 16px;
+
+	&.default{
+		.label{
+			min-width:fit-content !important;
+		}
+	}
+
+	&.aligned .label {
+		min-width: 250px;
+
+		@include until($large-tablet) {
+			min-width: 140px;
+		}
+	}
+
+	&.new-line {
+		flex-flow: row wrap;
+
+		.value {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.label {
+		display: inline-block;
+		// color: $brand-color;
+		color: #fff;
+		font-weight: 700;
+		margin-right: 5px;
+	}
+
+	.button{
+		&:nth-child(2){
+			margin-left:25px;
+		}
+	}
+}
+
+.meta-actions {
+	margin-top: 40px;
+	display: flex;
+	justify-content: flex-end;
+}

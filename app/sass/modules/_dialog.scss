@@ -1,0 +1,418 @@
+.dialog-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .dialog-overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .add-new-guardian.dialog {
+    max-height: 600px;
+
+    .dialog-body {
+      max-height: 550px;
+      overflow-y: scroll;
+
+      .form-section {
+        width: 100%;
+
+        .form-section-title {
+          font-size: 24px;
+          font-weight: normal;
+        }
+
+        .form-group {
+          width: 48%;
+
+          .form-label {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  .dialog {
+    width: 680px;
+
+    &.size-chart-dialog {
+      width: auto;
+      max-width: 800px;
+    }
+
+    &.add-new-guardian {
+      max-height: 750px;
+
+      .dialog-header {
+        padding: 0 0 40px;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-family: "Intro Inline", Helvetica, Arial, sans-serif;
+      }
+    }
+
+    .dialog-body {
+      display: flex;
+      justify-items: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: left;
+
+      p {
+        margin: 0;
+        display: block;
+        width: 100%;
+      }
+
+      .form-actions {
+        margin-top: 25px;
+        padding-top: 25px;
+        justify-content: flex-end;
+      }
+
+      /**
+        Add download category dialog style
+       */
+      .add-download-category{
+        width:100%;
+
+        .form-wrapper{
+          width:100%;
+        }
+      }
+
+      /**
+        Consent dialog style
+       */
+      .consent-dialog{
+        width:100%;
+
+
+
+        .option-input{
+          display:inline-block;
+          margin-right:10px;
+        }
+      }
+
+    }
+
+    /**
+      Add coach in programme component dialog box style
+     */
+    &.programme-add-new-coach{
+      height:500px;
+      overflow-y:scroll;
+
+      .form-section{
+        width:100%;
+
+        .form-group{
+          width:48%;
+
+          &.form-type-multi-select{
+            width:100%;
+          }
+
+          &:nth-child(1){
+            margin-right:4%;
+          }
+        }
+      }
+
+      .form-card{
+        width:48%;
+
+        &:nth-child(1){
+          margin-right:4%;
+        }
+
+        .form-group{
+          width:100%;
+        }
+      }
+    }
+
+    /**
+        Add team in programme component dialog box style
+     */
+
+    &.add-team-dialog {
+      width:90%;
+      height:90%;
+      overflow-y:scroll;
+    }
+
+    &.select-coach-dialog {
+      .dialog-body{
+        & div:first-child{
+          width:100%;
+        }
+      }
+    }
+
+    /**
+        Add coach dialog box style
+     */
+    &.dialog-coach-add{
+
+      .dialog-body-inner{
+        width:100%;
+
+        .dialog-right-side{
+          width:100%;
+        }
+      }
+    }
+
+    /**
+    ****************************************
+      Add venue in fixture component dialog box
+    ****************************************
+     */
+
+    &.add-venue-dialog{
+      overflow-y:scroll;
+      height:90%;
+    }
+
+    /**
+    ****************************************
+      End venue dialog
+    ****************************************
+     */
+  }
+
+  .dialog-content {
+    position: relative;
+    background-color: #191919;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #404040;
+    outline: 0;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    padding: 40px;
+
+    .dialog-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      .dialog-body-inner {
+        display: flex;
+
+        &.direction-column {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .change-package-content {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          h4 {
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+      }
+
+      .dialog-left-sidebar {
+        width: 88px;
+        height: 88px;
+        margin-right: 40px;
+
+        &.custom-img{
+          width:150px;
+        }
+      }
+
+      .dialog-right-side {
+        width: fit-content;
+
+        h3 {
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+
+  .dialog-header {
+    padding: 0 15px 20px 0;
+    position: relative;
+    text-transform: capitalize;
+
+    .dialog-close-wrapper {
+      position: absolute;
+      top: 1px;
+      right: -15px;
+      box-shadow: 0 5px 5px #111111;
+      width: 35px;
+      height: 35px;
+      background: #000;
+      border-radius: 50%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #BB9D70;
+
+      .dialog-close {
+        padding: 0;
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  .url-dialog {
+    .dialog-header {
+      display: flex;
+      text-align: center;
+    }
+  }
+
+  .dialog-title {
+    width: max-content;
+    font-size: 22px;
+    color: #FFFFFF;
+    line-height: 22px;
+    font-weight: bold;
+  }
+
+  .package-name {
+    .dialog-title {
+      width: auto;
+      font-size: 22px;
+      color: #FFFFFF;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .dialog-close-wrapper {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .dialog-close {
+      background: none;
+      padding: 5px;
+      color: white;
+      font-size: 34px;
+      border: none;
+      line-height: 1;
+    }
+  }
+
+  .dialog-body {
+    position: relative;
+    color: #fff;
+    min-height: 200px;
+    justify-content: center;
+
+    .repeatable-label,
+    .repeatable-row-add,
+    .form-label {
+      color: #fff;
+      text-align: left;
+    }
+
+    .text-danger .form-label {
+      color: $danger;
+    }
+
+    .form-wrapper {
+      margin-bottom: 0;
+    }
+
+    .form-group {
+      .react-datepicker__navigation {
+        background-color: transparent;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .form-field-wrapper {
+        margin: 0;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .dialog-footer {
+    margin-top: 30px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .button {
+      margin-left: 25px;
+
+      &.hover-blue {
+        &:hover {
+          color: $light-blue;
+        }
+      }
+    }
+
+    .button.disabled {
+      color: #818181;
+      cursor: default;
+
+      &:after {
+        border-color: #818181;
+      }
+
+      &:before {
+        border-color: #818181;
+      }
+    }
+  }
+}
+
+.kit-form {
+  .form-field-wrapper {
+    max-width: none;
+    width: 100%;
+
+    .form-options {
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      max-height: 400px;
+    }
+  }
+}
+
+.kit-assign-dialog {
+  .dialog-body {
+    .dialog-right-side {
+      .form-group {
+        width: 250px;
+      }
+    }
+  }
+}

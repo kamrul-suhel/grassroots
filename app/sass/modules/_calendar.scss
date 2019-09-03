@@ -1,0 +1,179 @@
+.calendar-wrapper {
+  display: block;
+
+  .rbc-month-view{
+    height:calc(100% - 50px);
+
+    @include until($small-desktop){
+      height:calc(100% - 130px);
+    }
+  }
+}
+
+.rbc-calendar {
+  height: 700px;
+}
+
+.rbc-month-view, .rbc-week-view, .calendar-key {
+  .calendar {
+    &-fixture {
+      background-color: #54457F;
+    }
+
+    &-event {
+      background-color: #0072BB;
+    }
+
+    &-programme {
+      background-color: #C45AB3;
+    }
+
+    &-statement {
+      background-color: #0F8B8D;
+    }
+
+    &-availability {
+      background-color: #23C9FF;
+    }
+
+    &-todo {
+      background-color: $brand-color;
+    }
+
+    &-schedule {
+      background-color: #FF570A;
+    }
+
+    &-coach-availability, &-my-availability {
+      background-color: #23C9FF;
+    }
+
+    &-today {
+      background-color: rgba(163, 22, 34, 0.4)
+    }
+
+    &-selected {
+      background-color: $brand-color-alt !important;
+    }
+  }
+}
+
+.calendar-key {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  [class^='calendar-'] {
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 2px;
+    margin: 5px 5px 5px 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.rbc-month-view, .rbc-time-view, .rbc-agenda-view {
+
+  a {
+    color: white;
+  }
+}
+
+.rbc-today {
+  background-color: rgba(163, 22, 34, 0.4) !important;
+}
+
+.rbc-toolbar {
+
+  & :first-child {
+    & :not(:first-child) {
+      font-size: 0px;
+    }
+
+    & :nth-child(2) {
+      position: relative;
+
+      &:after {
+        @include font-icon;
+        content: "\f3d2";
+        font-size: 20px;
+        color: $brand-color-alt;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    & :nth-child(3) {
+      position: relative;
+
+      &:after {
+        @include font-icon;
+        content: "\f3d3";
+        font-size: 20px;
+        color: $brand-color-alt;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.rbc-btn-group {
+
+
+  button {
+    color: $brand-color-alt !important;
+
+    &.rbc-active {
+      background-color: lighten($bg-color-alt, 10%) !important;
+    }
+  }
+}
+
+.rbc-off-range-bg {
+  background-color: $bg-color !important;
+}
+
+.rbc-event-content {
+  display: flex !important;
+
+  .calendar-link {
+    width: 100%;
+    flex: 1;
+  }
+}
+
+.rbc-toolbar {
+
+  > * {
+    display: flex;
+    justify-content: center;
+
+    @include until($large-tablet) {
+      flex-basis: 100%;
+      margin-top: 5px;
+    }
+  }
+}
+
+.rbc-agenda-event-cell {
+
+  &:hover a {
+    color: $brand-color-alt !important;
+  }
+}

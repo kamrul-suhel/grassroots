@@ -1,0 +1,11 @@
+export { default as AcademySetup } from './AcademySetup';
+export { default as AgeGroup } from './AgeGroup';
+export { default as Details } from './Details';
+export { default as FCSetup } from './FCSetup';
+export { default as Kit } from './Kit';
+export { default as Licence } from './Licence';
+export { default as Setup } from './Setup';
+export { default as Skill } from './Skill';
+export { default as View } from './View';
+export { default as Wrapper } from './Wrapper';
+export {default as SocialLink} from './SocialLink';

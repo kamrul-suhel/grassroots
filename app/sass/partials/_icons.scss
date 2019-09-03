@@ -1,0 +1,57 @@
+[class*="icon-"]:before {
+	@include font-icon;
+}
+
+.icon-social {
+	display: inline-block;
+	vertical-align: middle;
+	&:before {
+		content: "";
+		@include font-icon;
+		display: block;
+	}
+	&[href*="facebook"]:before { content: "f"; }
+	&[href*="instagram"]:before { content: "o"; }
+	&[href*="google"]:before { content: "g"; }
+	&[href*="mailto"]:before { content: "e"; }
+	&[href*="linkedin"]:before { content: "l"; }
+	&[href*="pinterest"]:before { content: "p"; }
+	&[href*="tel"]:before { content: 'p'; }
+	&[href*="twitter"]:before { content: "t"; }
+	&[href*="youtube"]:before { content: "y"; }
+}
+
+.icon-legend {
+	@extend %bg-contain;
+	width: 40px;
+	height: 40px;
+}
+
+i {
+	font-size: 22px;
+	line-height: 16px;
+	position: relative;
+	top: 1px;
+	width: 22px;
+	text-align: center;
+	display: inline-block;
+}
+
+.icon-organisation{
+	width:16px;
+	height:20px;
+	background: url(/images/icon/organisation.png) no-repeat;
+	background-size: contain;
+}
+
+.ion-pound{
+	&:before{
+		font-weight:bolder;
+		content:'\00a3';
+	}
+}
+
+.icon-save{
+	width:20px;
+	height:20px;
+}

@@ -1,0 +1,110 @@
+.club-setup-page {
+  .page-header{
+    .page-actions{
+      margin:0;
+    }
+  }
+
+  .club-description{
+    .page-description{
+      margin:0;
+    }
+  }
+
+  .btn-club-portal{
+    background-color:transparent;
+    color:$brand-color-alt;
+    border:none;
+  }
+
+  .form-option-radio {
+    margin-right: 5px !important;
+  }
+
+  .form {
+    width: 75%;
+  }
+
+  .form-section{
+    width: 100%;
+  }
+
+  .repeatable-row{
+    .repeatable-row-remove{
+      margin-top:10px;
+    }
+  }
+
+  .table{
+    margin-top:30px;
+  }
+
+  .club-url{
+    @include until($tablet) {
+      //width: 75%;
+    }
+
+
+    width: 100%;
+    border: 1px $bg-color solid;
+    padding: 10px;
+    background-color: $bg-color;
+    overflow: auto;
+
+    ul {
+      padding:0;
+
+      li {
+
+        .url-info {
+          cursor: pointer;
+          text-align: center;
+          height: 20px;
+          width: 20px;
+          font-size: 15px;
+          font-weight: bolder;
+          border: 1px solid white;
+          border-radius: 50%;
+          margin: 3px;
+          padding-bottom: 20px;
+        }
+
+        @include until($tablet) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        display:flex;
+
+        span{
+          @include until($tablet) {
+
+            width:150px;
+            min-width: 150px;
+
+          }
+          width:200px;
+          min-width: 200px;
+          display:inline-block;
+        }
+
+        a {
+          margin-right: auto;
+        }
+
+      }
+    }
+  }
+
+}
+
+.club-setup-button {
+  display: flex;
+  justify-items:center;
+  align-items:center;
+  flex-direction:row;
+  justify-content:center;
+
+  button{
+    margin-right:10px;
+  }
+}

@@ -1,0 +1,10 @@
+#content.register-page{
+  .form-section{
+    width:100%;
+  }
+
+    .form-type-checkbox.terms.form-group-invalid{
+      background-color:transparent;
+      border:1px solid $brand-color-alt;
+    }
+}

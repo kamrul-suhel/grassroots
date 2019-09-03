@@ -1,0 +1,55 @@
+%bg-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+%bg-contain {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+%centering {
+	max-width: $site_width;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+%clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin at-least($device-width) {
+	@media screen and (min-width: $device-width) {
+		@content
+	}
+}
+
+@mixin until($device-width) {
+	@media screen and (max-width: $device-width - 1) {
+		@content
+	}
+}
+
+@mixin font-icon {
+	line-height:1;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $icon-family-base;
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}
+}

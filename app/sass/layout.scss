@@ -1,0 +1,416 @@
+@import "vendor/normalize";
+@import "vendor/ionicons";
+@import "partials/variables";
+@import "vendor/react-datepicker";
+@import "vendor/react-draft-js";
+@import "vendor/react-slider";
+@import "vendor/react-select";
+@import "vendor/react-tabs";
+@import "vendor/react-timepicker";
+@import "vendor/react-big-calendar";
+@import "partials/mixins";
+@import "partials/fonts";
+@import "partials/forms";
+@import "partials/typography";
+@import "partials/table";
+@import "partials/animations";
+@import "partials/grid";
+@import "partials/buttons";
+@import "partials/icons";
+@import "partials/items";
+@import "partials/color_class";
+@import "partials/snackbar-message";
+@import "partials/player-page";
+@import "partials/register_page";
+@import "partials/club_setup_page";
+@import "partials/component";
+@import "modules/alert";
+@import "modules/accordion";
+@import "modules/article";
+@import "modules/badge";
+@import "modules/block";
+@import "modules/calendar";
+@import "modules/dashboard";
+@import "modules/dialog";
+@import "modules/filter";
+@import "modules/footer";
+@import "modules/general";
+@import "modules/header";
+@import "modules/message-board";
+@import "modules/meta";
+@import "modules/navigation";
+@import "modules/notifications";
+@import "modules/pagination";
+@import "modules/registration-wizard";
+@import "modules/section";
+@import "modules/site";
+@import "modules/tooltip";
+@import "modules/page";
+@import "modules/feedback";
+@import "modules/licence_list_page";
+@import "modules/email-page";
+@import "modules/coach-page";
+@import "modules/attendance-page";
+@import "modules/settings";
+@import "modules/wysiwyg";
+//@import 'modules/loader';
+
+html {
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  // overflow-y: scroll;
+
+  &.no-scroll {
+    @include until($tablet) {
+      overflow: hidden !important;
+      height: 100% !important;
+      overflow-y: scroll;
+    }
+  }
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: white;
+  height: 100%;
+
+  &.no-scroll {
+    @include until($tablet) {
+      overflow: hidden;
+      height: 100%;
+    }
+  }
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 10px;
+  // background-color: rgba(128, 128, 128, 0.3);
+}
+
+/* Track */
+// ::-webkit-scrollbar-track {
+//     box-shadow: inset 0 0 5px #fff;
+//     border-radius: 0;
+// }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(77, 77, 77);
+  border-radius: 0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken(rgb(77, 77, 77), 5%);
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100%;
+}
+
+.site {
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: scroll;
+
+  &.is-transitioning {
+    overflow: hidden;
+  }
+
+  &.bg:before {
+    @extend %bg-cover;
+    content: "";
+    position: fixed;
+    top: 170px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../images/login-img.jpg");
+    background-position: top center;
+    z-index: -2;
+  }
+
+  & > .bg {
+    @extend %bg-cover;
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: top center;
+    z-index: -2;
+
+    &.darker {
+      top: 140px;
+      left: 300px;
+
+      @include until($large-desktop) {
+        left: 240px;
+      }
+
+      @include until($large-tablet) {
+        left: 0;
+      }
+
+      @include until($small-tablet) {
+        top: 0;
+      }
+
+      &:before {
+        opacity: 0.9;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background-color: black;
+      opacity: 0.9;
+    }
+  }
+
+  &.page {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.kit-size-select {
+  width: 200px;
+
+  .form-type-select {
+    flex: 1;
+  }
+}
+
+.pod-count {
+  .form-group {
+    input {
+      width: 14px;
+    }
+  }
+
+  .count {
+    margin-right: 8px;
+    display: block;
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    line-height: 28px;
+    text-align: center;
+    color: $bg-color;
+    border-color: $bg-color;
+  }
+
+  label {
+    height: 34px;
+    min-width: 34px !important;
+    border-radius: 50%;
+    width: 34px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+
+::selection {
+  background: #b3d4fc;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #b3d4fc;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+}
+
+::-webkit-input-placeholder {
+  color: $text-color;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  color: $text-color;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: $text-color;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: $text-color;
+  opacity: 1;
+}
+
+a {
+  color: $brand-color-alt;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.hide,
+.hidden {
+  display: none !important;
+}
+
+.centering {
+  @extend %centering;
+}
+
+.mo {
+  @include at-least($tablet) {
+    display: none;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+
+  &.back-button {
+    justify-content: flex-end;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+}
+
+.fullwidth {
+  width: 100% !important;
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.or-separator {
+  text-transform: uppercase;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.link {
+  &.link-small {
+    font-size: 14px;
+  }
+
+  &.darken {
+    color: $text-color;
+  }
+
+  &:hover {
+    color: $brand-color-alt;
+  }
+}
+
+.programme-accordion {
+  &.is-active {
+    .accordion-header:after {
+      display: none;
+    }
+  }
+
+  .accordion-header:after {
+    content: "Edit programme";
+    font-size: 14px;
+    font-weight: 700 !important;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase !important;
+    font-family: $font-family-base;
+    color: $brand-color-alt;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-right-align {
+  text-align: center;
+}
+
+.rollover {
+  left: 65px;
+  position: absolute;
+  z-index: 9;
+  color: #202020;
+  background-color: #afacac;
+  padding: 2px 5px;
+  opacity: 0.9;
+
+  &.hidden {
+    display: none;
+  }
+}

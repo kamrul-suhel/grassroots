@@ -1,0 +1,151 @@
+.tooltip {
+  &.show-tooltip {
+    display: block !important;
+  }
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    .tooltip-message, .tooltip-message-right {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0.4s;
+      transform: translateX(-50%) translateY(0);
+      left: 50%;
+    }
+  }
+
+  .tooltip-icon {
+    cursor: pointer;
+    color: $bg-color;
+
+    .ion-alert {
+
+    }
+  }
+
+  %tooltip-message {
+    position: absolute;
+    margin-top: 8px;
+    background: #afacac;
+    padding: 6px 8px;
+    z-index: 101;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-50%) translateY(2px);
+    transition: 0.3s ease;
+    color: #202020;
+    text-align: center;
+
+
+  }
+
+  .tooltip-message {
+    @extend %tooltip-message;
+    min-width: max-content;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: calc(50% - 6px);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent #afacac transparent;
+    }
+  }
+
+  .tooltip-message-right {
+    @extend %tooltip-message;
+    left: 142%;
+    top: -20%;
+    min-width: 180px;
+    // border: 1px solid grey;
+    text-align: left;
+    height: 100%;
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+  }
+}
+
+.licence-list-page {
+  .tooltip-icon {
+    span {
+      color: $bg-color;
+    }
+  }
+}
+
+
+/**
+Notification
+ */
+
+.notification-wrapper {
+  display: flex;
+
+  .notification-title {
+    position: relative;
+  }
+
+  .notification-item {
+    position: absolute;
+    top: 6px;
+    left: -20px;
+    width: 15px;
+    height: 15px;
+    background: #e46060;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+
+    &:hover + .notification-tooltips {
+      opacity: 1;
+    }
+  }
+
+  .notification-tooltips {
+    opacity: 0;
+    padding: 5px 10px;
+    background: #1c1e1b;
+    position: absolute;
+    width: max-content;
+    top: -35px;
+    left: 0;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all ease-in-out .3s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: calc(50% - 6px);
+      transform: rotate(180deg);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent #1c1e1b transparent;
+    }
+  }
+}
+
+/**
+Coach list table tooltip style
+ */
+
+.coach-component-table {
+  .tooltip {
+    .tooltip-message {
+      left: 10px;
+    }
+  }
+}

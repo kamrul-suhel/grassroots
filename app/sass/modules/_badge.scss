@@ -1,0 +1,23 @@
+.badge {
+	width: 120px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px;
+
+	.badge-icon {
+		@extend %bg-cover;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		background-color: white;
+	}
+
+	.badge-title {
+		display: block;
+		margin-top: 10px;
+		font-weight: 14px;
+		line-height: 1.2;
+		color: white;
+	}
+}

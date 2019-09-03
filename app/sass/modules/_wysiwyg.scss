@@ -1,0 +1,26 @@
+.editor-wrapper-class{
+  width:100%;
+  background:$light-white;
+  color:#000;
+}
+
+.editor-class{
+  padding:15px;
+  height:250px;
+
+  figure{
+    margin:0;
+  }
+}
+
+// Editor content
+
+.editor-content{
+  img{
+    display:block;
+    clear:both;
+  }
+  p{
+    clear:both;
+  }
+}

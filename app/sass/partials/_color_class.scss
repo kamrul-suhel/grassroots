@@ -1,0 +1,35 @@
+.text-danger{
+  color: $light-blue !important;
+}
+
+.text-danger-light{
+  color:$light-blue;
+
+  .text-danger{
+    color: $light-blue !important;
+  }
+}
+
+.text-error{
+  color: $light-blue;
+}
+
+.text-success{
+
+}
+
+.text-small{
+  font-size:16px;
+}
+
+.text-gray{
+  color:#999;
+}
+
+.text-green{
+  color: $success !important;
+}
+
+.text-red{
+  color:$danger !important;
+}
